@@ -1,2 +1,1 @@
-# django-custom-auth
 # healthcare
