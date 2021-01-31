@@ -2,14 +2,19 @@
 {% load static %}
 {% block content %}
 
-<div class="full" style='background: url("{% static 'img/straight-neck.png' %}") center / cover;'>
-    <h1>デスクワークの天敵『ストレートネック』</h1>
+<div class="full" style='background: url("{{detail_data.image.url}}") center / cover;'>
+    <h1>{{detail_data.title}}</h1>
 </div>
 
 <div>原因</div>
+<p>{{detail_data.cause}}</p>
 <div>対策</div>
+<p>{{detail_data.improve}}</p>
 <div>動画</div>
-<div>病院おすすめ</div>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{detail_data.video}}" allowfullscreen></iframe>
+</div>
+<div>おすすめの病院「全国版」</div>
 <div>「首」に関する掲示板</div>
 
 {% endblock %}
